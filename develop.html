@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
     <link rel="shortcut icon" href="/img (4).svg">
     <title>Iguana Music</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <main>
         <div class="container">
@@ -16,31 +20,98 @@
                 <h1>IGUANA MUSIC</h1>
                 <nav>
                     <div class="circle">
-                        <button class="circle__chevron"><img src="/bx-chevron-down.svg" alt=""></button>
+                        <i class="fa-solid fa-chevron-down"></i>
                     </div>
                     <div class="circle">
-                        <button class="circle__bars"><img class="circle__bars__img" src="/bars-solid.png" alt=""></button>
+                        <i class="fa-solid fa-bars"></i>
                     </div>
                 </nav>
                 <img src="/Ellipse 6.svg" class="song-img" alt="">
                 <h2>Kingston Town</h2>
                 <p>UB40</p>
 
-<audio controls>
-    <source src="/UB40 - Kingston Town.mp3" type="audio/mpeg"> 
-</audio>
-<input type="range" value="0" id="progress"> 
+                <audio id="song">
+                    <source src="/UB40 - Kingston Town.mp3" type="audio/mpeg">
+                </audio>
+                <input type="range" value="0" id="progress">
 
-<div class="controls">
-    <div><button class="controls__button"><img class="controls__button__img" src="/backward-solid.png" alt=""></button></div>
-    <div><button class="controls__button"><img class="controls__button__img" src="/play-solid.png" alt=""></button></div>
-    <div><button class="controls__button"><img class="controls__button__img" src="/forward-solid.png" alt=""></button></div>
-</div>
-                
+                <div class="controls">
+                    <div><i class="fa-solid fa-backward"></i></div>
+                    <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlicon"></i></div>
+                    <div><i class="fa-solid fa-forward"></i></div>
+                </div>
+
+
             </div>
         </div>
-        
-    </main>   
-    <script src="/index.js"></script>
+
+        <div class="panel-izquierdo">
+            <header>
+                <nav class="busqueda">
+                    <img src="/img (2).svg" alt="">
+                    <form action="">
+                        <input type="Buscar">
+                        <button><img src="/solid_search_lupa_find-512 1.svg" alt=""></button>
+                    </form>
+                </nav>
+            </header>
+
+            <div class="lista-canciones" id="track-list">
+                <div>
+                    <img src="/Ellipse 7.svg" alt="">
+                    <p>Lost on You</p>
+                    <p>LP</p>
+                    <a href="https://www.youtube.com/watch?v=hn3wJ1_1Zsg"></a>
+                </div>
+
+                <div>
+                    <img src="/Ellipse 8.svg" alt="">
+                    <p>Papercut</p>
+                    <p>Linkin Park</p>
+                    <audio src=""></audio>
+                </div>
+
+                <div>
+                    <img src="/Ellipse 10.svg" alt="">
+                    <p>Dark Beach</p>
+                    <p>Pastel ghost</p>
+                    <a href=""></a>
+                </div>
+
+                <div>
+                    <img src="/Ellipse 11.svg" alt="">
+                    <p>Enamorado Tuyo</p>
+                    <p>Cuarteto de Nos</p>
+                    <a href=""></a>
+                </div>
+
+                <div>
+                    <img src="/Ellipse 12.svg" alt="">
+                    <p>Snowman</p>
+                    <p>Sia</p>
+                    <a href=""></a>
+                </div>
+
+                <div>
+                    <img src="/Ellipse 9.svg" alt="">
+                    <p>Stay with me</p>
+                    <p>Miki Matsubara</p>
+                    <a href=""></a>
+                </div>
+
+                <div>
+                    <img src="/Ellipse 6.svg" alt="">
+                    <p>Kingston Town</p>
+                    <p>UB40</p>
+                    <a href=""></a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <script src="/develop.js"></script>
+
 </body>
+
 </html>
