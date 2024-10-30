@@ -42,14 +42,20 @@ axios.get('https://api.institutoalfa.org/api/songs').then((res) => {
         div.setAttribute('class', 'panel-central_cancionescontenido_cancion')
 
         div.innerHTML = `
-        <img src="https://api.institutoalfa.org/api/songs/image/${song.image.filename}" alt="">
-        <div class="panel-central_cancionescontenidocancion_descripcion">
-            <div class="panel-central_cancionescontenidocancion_descripcion__titulos">
+         <img src="https://api.institutoalfa.org/api/songs/image/${song.image.filename}" alt="">
+         <div class="panel-central_cancionescontenidocancion_descripcion">
+             <div class="panel-central_cancionescontenidocancion_descripcion__titulos">
                 <a href="#">${song.title}</a>
                 <a href="#">${song.author}</a>
-            </div>
-        </div>
-        `
+             </div>
+         </div>
+         `
+        div.addEventListener("click", () => {
+            document.getElementById("current-song-image").setAttribute("src",`https://api.institutoalfa.org/api/songs/image/${song.image.filename}`)
+            document.getElementById("current-song-title").innerHTML = song.title
+            document.getElementById("current-song-author").innerHTML = song.author
+            document.getElementById("song").setAttribute("src", `https://api.institutoalfa.org/api/songs/audio/${song.audio.filename}`)
+        })
 
         contenedor.appendChild(div)
     })
