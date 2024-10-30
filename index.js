@@ -54,6 +54,9 @@ axios.get('https://api.institutoalfa.org/api/songs').then((res) => {
             document.getElementById("current-song-image").setAttribute("src",`https://api.institutoalfa.org/api/songs/image/${song.image.filename}`)
             document.getElementById("current-song-title").innerHTML = song.title
             document.getElementById("current-song-author").innerHTML = song.author
+            playPause({
+                
+            }) 
             document.getElementById("song").setAttribute("src", `https://api.institutoalfa.org/api/songs/audio/${song.audio.filename}`)
         })
 
