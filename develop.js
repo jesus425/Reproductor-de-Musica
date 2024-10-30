@@ -44,7 +44,7 @@ axios.get('https://api.institutoalfa.org/api/songs').then((res) => {
         div.innerHTML = `
         <img src="https://api.institutoalfa.org/api/songs/image/${song.image.filename}" alt="">
         <div class="panel-central_cancionescontenidocancion_descripcion">
-            <div>
+            <div class="panel-central_cancionescontenidocancion_descripcion__titulos">
                 <a href="#">${song.title}</a>
                 <a href="#">${song.author}</a>
             </div>
@@ -70,3 +70,5 @@ let cancion = {
         cancion.titulo = nuevotitulo
     }
 }
+
+       
