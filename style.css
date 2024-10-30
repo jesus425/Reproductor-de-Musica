@@ -51,6 +51,7 @@ nav .circle{
     border-radius: 50%;
     border: 8px solid #fff;
     box-shadow: 0 10px 60px rgba(255, 26, 26, 0.22);
+    height: 220px
 }
 .music-player h1{
     font-size: 24px;
